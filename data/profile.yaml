@@ -1,0 +1,21 @@
+---
+company_name: Behold
+primary_contact:
+  full_name: John Smith
+  email: john@hungryram.com
+  phone: "+1 212 455 0983"
+  street_address: 123 Demo Street
+  city: Newport
+  state: California
+  zip_code: 92886
+social_accounts:
+  instagram: https://instagram.com/hungry_ram
+  twitter: https://twitter.com/hungryram
+  facebook: https://facebook.com/hungryram
+  youtube: https://youtube.com
+  Yelp: ''
+  linkedin: ''
+  pinterest: ''
+search_engine_optimization:
+  title_tag: ''
+  meta_description: ''
