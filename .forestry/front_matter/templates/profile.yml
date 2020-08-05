@@ -1,4 +1,9 @@
 ---
 label: Profile
 hide_body: true
-fields: []
+fields:
+- name: primary_company_name
+  type: text
+  config:
+    required: false
+  label: Primary Company Name
