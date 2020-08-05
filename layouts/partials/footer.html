@@ -1,0 +1,128 @@
+<!-- Footer -->
+<div style="clear:both"></div>
+<footer class="footer site-footer" style="{{ safeHTMLAttr (printf "background-color: %s" .Site.Data.design.footer.footer_background_color) }}">
+<div class="section">
+  <div class="container">
+    <div class="columns is-variable is-8">
+      <div class="column" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>
+        <a href="{{ .Site.BaseURL }}">
+              {{ with .Site.Data.design.logo_and_title.logo}}
+          <img src="{{ . }}" alt="{{ $.Site.Data.profile.company_name }}" width="200">
+              {{ else }}
+          <h1 class="title is-4 footer-logo-text"  {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>{{ .Site.Data.profile.primary_company_name }}</h1>
+              {{ end }}
+        </a>
+        <p>{{ .Site.Data.design.footer.footer_bio }}</p>
+        <em>{{ .Site.Data.profile.primary_contact.license_type }} {{ .Site.Data.profile.primary_contact.license_number }}</em>
+      </div>
+      {{/*  <div class="column">
+        <h4 class="subtitle is-6 has-text-weight-bold" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#a4a4a4"{{end}}>Contact</h4>
+        {{ $footerContact := .Site.Data.profile.primary_contact }}
+        {{ if gt ( len $footerContact.street_address ) 0 }}<p {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>{{ $footerContact.street_address }} {{ $footerContact.city }}, {{ $footerContact.state }} {{ $footerContact.zip_code }}</p>{{ end }}
+        {{ if $footerContact.phone }}<p {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>Phone: <a href="tel:{{ $footerContact.phone }}" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>{{ $footerContact.phone }}</a></p>{{ end }}
+        {{ if $footerContact.email }}<p {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>Email: <a href="mailto:{{ $footerContact.email }}" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>{{ $footerContact.email }}</a></p>{{ end }}
+
+        {{ $footerSocial := .Site.Data.profile.social_accounts }}
+        <ul class="footer-social">
+          {{ with $footerSocial.facebook }}
+          <li><a href="{{ . }}" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></i></a></li>
+          {{end}}
+
+          {{ with $footerSocial.instagram }}
+          <li><a href="{{ . }}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+          {{end}}
+
+          {{ with $footerSocial.yelp }}
+          <li><a href="{{ . }}" target="_blank" title="Yelp"><i class="fab fa-yelp"></i></a></li>
+          {{end}}
+
+          {{ with $footerSocial.linkedin }}
+          <li><a href="{{ . }}" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+          {{end}}
+
+          {{ with $footerSocial.pinterest }}
+          <li><a href="{{ . }}" target="_blank" title="Pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+          {{end}}
+
+          {{ with $footerSocial.twitter }}
+          <li><a href="{{ . }}" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+          {{end}}
+
+          {{ with $footerSocial.youtube }}
+          <li><a href="{{ . }}" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+          {{end}}
+        </ul>
+      </div>  */}}
+      <div class="column">
+        <h4 class="subtitle is-6 has-text-weight-bold" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#a4a4a4"{{end}}>Quick Links</h4>
+        <p><a href="/services" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>Services</a></p>
+        <p><a href="/about" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>About</a></p>
+        <p><a href="/contact" {{ if .Site.Data.design.footer.enable_black_text}}style="color:black"{{else}} style="color:#666666"{{end}}>Contact</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="container">
+        <hr style="background:#2c2c2c;">
+        <div class="columns">
+            <div class="column">
+                <div class="bottom-credit">
+                    <small>&copy; Copyright {{ dateFormat "2006" now }}, {{ .Site.Data.profile.company_name }}</small> &middot; <a href="https://hungryram.com" target="_blank">Website Developed by Hungry Ram</a>
+                  </div>
+            </div>
+            <div class="column has-text-right">
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="/terms-and-condition">Terms and Condition</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/accessibility">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-lightbox/0.2.12/slick-lightbox.min.js"></script>
+        <script src="{{.Site.BaseURL}}/js/main.js"></script>
+
+        <script>
+          // COLORS
+          // SECONDARY BUTTON
+          document.querySelectorAll(".secondary-btn").forEach(function(el) {
+            el.style.color = '{{ .Site.Data.design.colors.text_link_colors }}';
+          });
+          // PRIMARY BUTTON
+          document.querySelectorAll("a.main-btn").forEach(function(bg) {
+            bg.style.backgroundColor = '{{ .Site.Data.design.colors.button_background_colors }}';
+          });
+
+
+        </script>
+        <script>
+            $(document).ready(function() {
+
+            // Check for click events on the navbar burger icon
+                $(".navbar-burger").click(function() {
+                
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    $(".navbar-burger").toggleClass("is-active");
+                    $(".navbar-menu").toggleClass("is-active");
+                
+                });
+
+                  $('.sub-menu').click(function(){
+                  $('.sub', this).toggleClass('sub-active-menu');
+                });
+
+                //SUBSUB
+                $('.subsub').click(function(){
+                  $('.sub', this).toggleClass('sub-active-menu');
+                });
+});
+</script>
+</body>
+</html>
