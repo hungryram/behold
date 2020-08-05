@@ -17,5 +17,5 @@ social_accounts:
   linkedin: ''
   pinterest: ''
 search_engine_optimization:
-  title_tag: ''
-  meta_description: ''
+  title_tag: The title tag for Google Engines
+  meta_description: The description for Google Engines to index you website information
