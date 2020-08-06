@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: "/static/admin"
 webhook_url: 
 sections:
-- type: document
-  path: data/home.yaml
-  label: Home Page
 - type: heading
   label: Profile
 - type: document
@@ -17,6 +14,15 @@ sections:
   label: Pages
   create: all
   match: "*"
+- type: heading
+  label: Website
+- type: document
+  path: data/home.yaml
+  label: Home Page
+- type: document
+  path: data/design.yaml
+  label: Design
+  match: "**/*"
 upload_dir: static/uploads
 public_path: "/uploads"
 front_matter_path: ''
