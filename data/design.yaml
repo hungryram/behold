@@ -1,0 +1,21 @@
+---
+construction:
+  enable_coming_soon: false
+logo_and_title:
+  logo: ''
+  company_title: ''
+  favicon: ''
+home_slideshow:
+  slideshow: []
+  slideshow_title: ''
+  slideshow_subtitle: ''
+banner:
+  banner_image: ''
+colors:
+  enable_black_menu_items: false
+  header_background_color: ''
+  page_background: ''
+footer:
+  footer_background_color: ''
+  enable_black_text: false
+  footer_bio: ''

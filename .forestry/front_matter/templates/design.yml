@@ -102,3 +102,5 @@ fields:
         format: markdown
     label: Footer Bio
   label: Footer
+pages:
+- data/design.yaml
